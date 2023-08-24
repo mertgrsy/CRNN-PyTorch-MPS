@@ -14,11 +14,11 @@
   python train.py -train path/to/train/data -val path/to/val/data
   ```
 ## Data Format
- [main]
- PLATE=label
- YOLO_PLT_3CLASS_1=label X Y w h
+ [main]__
+ PLATE=label__
+ YOLO_PLT_3CLASS_1=label X Y w h__
 ### Example Data
- [main]
- PLATE=34ANE534
- YOLO_PLT_3CLASS_1=0 0.5 0.5 0.3 0.1
+ [main]__
+ PLATE=34ANE534__
+ YOLO_PLT_3CLASS_1=0 0.5 0.5 0.3 0.1__
  
