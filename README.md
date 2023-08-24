@@ -1,6 +1,6 @@
 # CRNN-PyTorch-MPS
  Convolutional Recurrent Neural Network (CRNN) for image-based sequence recognition. 
- This code use MPS and CUDA.
+ With this code you can use MPS and CUDA.
 
  Run demo
 
