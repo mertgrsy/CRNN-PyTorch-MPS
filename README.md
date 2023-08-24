@@ -14,9 +14,9 @@
   python train.py -train path/to/train/data -val path/to/val/data
   ```
 ## Data Format
- [main] <br />
- PLATE=label <br />
- YOLO_PLT_3CLASS_1=label X Y w h <br />
+ [main] \
+ PLATE=label \
+ YOLO_PLT_3CLASS_1=label X Y w h 
 ### Example Data
  [main] <br />
  PLATE=34ANE534 <br />
