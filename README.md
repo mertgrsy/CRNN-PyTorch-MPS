@@ -18,7 +18,7 @@
  PLATE=label \
  YOLO_PLT_3CLASS_1=label X Y w h 
 ### Example Data
- [main] <br />
- PLATE=34ANE534 <br />
- YOLO_PLT_3CLASS_1=0 0.5 0.5 0.3 0.1 <br />
+ [main] \
+ PLATE=34ANE534 \
+ YOLO_PLT_3CLASS_1=0 0.5 0.5 0.3 0.1
  
