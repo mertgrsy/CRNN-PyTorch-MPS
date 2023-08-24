@@ -16,7 +16,7 @@
 ## Data Format
  [main] \
  PLATE=ocr_label \
- YOLO_PLT_3CLASS_1=label X Y w h 
+ YOLO_PLT_3CLASS_1=plate_type_label X Y w h 
 ### Example Data
  [main] \
  PLATE=34ANE534 \
