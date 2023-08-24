@@ -15,7 +15,7 @@
   ```
 ## Data Format
  [main] \
- PLATE=label \
+ PLATE=ocr_label \
  YOLO_PLT_3CLASS_1=label X Y w h 
 ### Example Data
  [main] \
