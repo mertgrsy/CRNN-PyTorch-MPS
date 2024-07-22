@@ -20,7 +20,7 @@ class lmdbDataset(Dataset):
         if not os.path.isdir(root):
             raise RuntimeError(f"Given input dataset path, {root}, not exist!")
 
-        self.data_list = [root + "/" + file for file in os.listdir(root) if file.split(".")[-1] in ["jpg", "jpeg", "png"]]
+        self.data_list = [root + "/" + file for file in os.listdir(root) if file.split(".")[-1] in ["jpg", "jpeg", "png", "JPG", "JPEG"]]
         if len(self.data_list) == 0:
             raise RuntimeError(f"Data_list is empty!")
 
@@ -41,7 +41,7 @@ class lmdbDataset(Dataset):
         assert index <= len(self), 'index range error'
         convert_tensor = transforms.ToTensor()
         file = self.data_list[index]
-        file = file.replace(".jpg",".def")
+        file = file.replace(".jpg",".def").replace(".jpeg",".def").replace(".png",".def").replace(".JPG",".def").replace(".JPEG",".def")
 
         with open(file, 'r') as f:
             data = f.read() 
@@ -73,6 +73,7 @@ class lmdbDataset(Dataset):
         # print(f"label: {data[0]}")
         plate = plate.upper()
         label = plate.encode("utf-8")
+
         if self.transform is not None:
             # print("yes transform is happening!")
             img = self.transform(img)
@@ -104,7 +105,8 @@ class ValDataset(Dataset):
         assert index <= len(self), 'index range error'
         convert_tensor = transforms.ToTensor()
         file = self.data_list[index]
-        file = file.replace(".jpg",".def")
+        file = file.replace(".jpg",".def").replace(".jpeg",".def").replace(".png",".def").replace(".JPG",".def").replace(".JPEG",".def")
+
 
         with open(file, 'r') as f:
             data = f.read() 
@@ -136,6 +138,8 @@ class ValDataset(Dataset):
         # print(f"label: {data[0]}")
         plate = plate.upper()
         label = plate.encode("utf-8")
+        # print(f"label: {label}")
+        # img.show()
         if self.transform is not None:
             # print("yes transform is happening!")
             img = self.transform(img)
